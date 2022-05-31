@@ -82,7 +82,7 @@ def main():
     st.header("Partial Auto-Correlation Function (PACF)")
 
     st.write("""Unlike ACF, PACF controls for other lags.\n
-            PACF represents how significant adding lag n is when you already have lag n-1.""")
+    PACF represents how significant adding lag n is when you already have lag n-1.""")
 
     pacf_type = st.radio(
         'Default PACF:', ('True', 'False'), key='pacf_type')
