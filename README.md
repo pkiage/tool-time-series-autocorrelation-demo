@@ -1,4 +1,4 @@
-# Time series decomposition tool
+# Time series autocorrelation tool
 
 Tool demonstrating time series autocorrelation analysis with Python
 
