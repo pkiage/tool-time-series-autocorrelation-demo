@@ -31,7 +31,7 @@ def streamlit_2columns_metrics_df_shape(df: pd.DataFrame):
 
 
 def show_inputted_dataframe(data):
-    with st.expander("Input Dataframe (X and y)"):
+    with st.expander("Input Dataframe:"):
         st.dataframe(data)
         streamlit_2columns_metrics_df_shape(data)
 
