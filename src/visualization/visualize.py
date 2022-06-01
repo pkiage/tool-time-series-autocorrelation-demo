@@ -49,7 +49,13 @@ def time_series_scatter_plot(data):
 
 
 def time_series_box_plot(data):
-    fig = px.box(data, points="all")
+    fig = px.box(data, hover_data=['Date'], points="all")
+    st.plotly_chart(fig, use_container_width=True)
+
+
+def time_series_violin_and_box_plot(graph_data):
+    fig = px.histogram(graph_data,
+                       marginal="violin")
     st.plotly_chart(fig, use_container_width=True)
 
 
@@ -59,6 +65,8 @@ def streamlit_chart_setting_height_width(
     default_heightvalue: int,
     widthkey: str,
     heightkey: str,
+
+
 ):
     with st.expander(title):
 
@@ -107,16 +115,6 @@ def streamlit_autocorrelation_plot_settings():
         return [lags_selected,
                 alpha_selected,
                 zero_include_selected]
-
-
-def display_input_data(data):
-    show_inputted_dataframe(data)
-
-    with st.expander("Box plot"):
-        time_series_box_plot(data)
-
-    with st.expander("Line Plot"):
-        time_series_line_plot(data)
 
 
 def streamlit_acf_plot_settings():

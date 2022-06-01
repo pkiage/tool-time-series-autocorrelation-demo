@@ -21,4 +21,7 @@ def import_sample_data(sample_data_selected, data_set_options):
         dta.index = pd.Index(sm.tsa.datetools.dates_from_range('1700', '2008'))
         del dta["YEAR"]
         data = dta
-    return data
+
+    graph_data = data.reset_index()
+    graph_data.columns.values[0] = 'Date'
+    return data, graph_data

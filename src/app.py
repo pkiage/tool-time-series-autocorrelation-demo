@@ -19,9 +19,17 @@ def main():
     sample_data_selected = st.selectbox(
         'Select sample data:', data_set_options)
 
-    data = import_sample_data(sample_data_selected, data_set_options)
+    data, graph_data = import_sample_data(
+        sample_data_selected, data_set_options)
 
-    display_input_data(data)
+    with st.expander("Line Plot:"):
+        time_series_line_plot(data)
+
+    with st.expander("Box Plot:"):
+        time_series_box_plot(graph_data)
+
+    with st.expander("Dist Plot (histogram and violin plot):"):
+        time_series_violin_and_box_plot(data)
 
     st.title("Time Series Autocorrelation")
 
@@ -81,8 +89,9 @@ def main():
 
     st.header("Partial Auto-Correlation Function (PACF)")
 
-    st.write("""Unlike ACF, PACF controls for other lags.\n
-    PACF represents how significant adding lag n is when you already have lag n-1.""")
+    st.write("Unlike ACF, PACF controls for other lags.")
+    st.write(
+        "PACF represents how significant adding lag n is when you already have lag n-1.")
 
     pacf_type = st.radio(
         'Default PACF:', ('True', 'False'), key='pacf_type')
