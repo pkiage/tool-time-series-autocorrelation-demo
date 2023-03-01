@@ -1,7 +1,7 @@
-from data.utils import *
-from features.utils import *
-from visualization.visualize import *
-from app_utils import *
+from src.data.utils import *
+from src.features.utils import *
+from src.visualization.visualize import *
+from src.app_utils import *
 
 
 def main():
