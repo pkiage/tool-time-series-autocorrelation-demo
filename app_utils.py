@@ -1,5 +1,5 @@
 import streamlit as st
-from features.utils import corr_analysis
+from src.features.utils import corr_analysis
 
 
 def corr_presentation(acf_array):

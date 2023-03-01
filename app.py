@@ -1,12 +1,12 @@
 from src.data.utils import *
 from src.features.utils import *
 from src.visualization.visualize import *
-from src.app_utils import *
+from app_utils import *
 
 
 def main():
 
-    st.title("Time Series Autocorrelation Demo")
+    st.title("Time Series Acorr_presentationutocorrelation Demo")
 
     st.write("""
     Autocorrelation is the correlation of a single time series with a lag copy of itself.\n
