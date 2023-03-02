@@ -6,7 +6,7 @@ from app_utils import *
 
 def main():
 
-    st.title("Time Series Acorr_presentationutocorrelation Demo")
+    st.title("Time Series Autocorrelation Demo")
 
     st.write("""
     Autocorrelation is the correlation of a single time series with a lag copy of itself.\n
