@@ -4,7 +4,7 @@ emoji: 📈
 colorFrom: indigo
 colorTo: blue
 sdk: streamlit
-sdk_version: 1.17.0
+sdk_version: 1.9.2
 app_file: app.py
 pinned: false
 license: openrail
@@ -90,5 +90,18 @@ streamlit run src/app.py
 
 ## Hugging Face Tips
 
-- [When syncing with Hugging Face via Github Actions](https://huggingface.co/docs/hub/spaces-github-actions) the [User Access Token](https://huggingface.co/docs/hub/security-tokens) created on Hugging Face (HF) should have write access
+Initial Setup
 - [When creating the Spaces Configuration Reference](https://huggingface.co/docs/hub/spaces-config-reference) ensure the [Streamlit Space](https://huggingface.co/docs/hub/spaces-sdks-streamlit) version (sdk_version) specified is supported by HF
+
+```shell
+git remote add space https://huggingface.co/spaces/pkiage/time_series_autocorrelation_demo
+
+git push --force space main
+```
+- [When syncing with Hugging Face via Github Actions](https://huggingface.co/docs/hub/spaces-github-actions) the [User Access Token](https://huggingface.co/docs/hub/security-tokens) created on Hugging Face (HF) should have write access
+
+
+## Demo Links
+- Hugging Face Space: https://huggingface.co/spaces/pkiage/time_series_autocorrelation_demo 
+- Streamlit Community Cloud: https://pkiage-tool-time-series-autocorrelation-demo-app-l0umps.streamlit.app/
+
