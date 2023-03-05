@@ -1,3 +1,15 @@
+---
+title: Time Series Autocorrelation Demo
+emoji: 📈
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.17.0
+app_file: app.py
+pinned: false
+license: openrail
+---
+
 # Time series autocorrelation tool
 
 Tool demonstrating time series autocorrelation analysis with Python
@@ -75,3 +87,8 @@ streamlit run src/app.py
 
 
 <p><small>Project structure based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>.</small></p>
+
+## Hugging Face Tips
+
+- [When syncing with Hugging Face via Github Actions](https://huggingface.co/docs/hub/spaces-github-actions) the [User Access Token](https://huggingface.co/docs/hub/security-tokens) created on Hugging Face (HF) should have write access
+- [When creating the Spaces Configuration Reference](https://huggingface.co/docs/hub/spaces-config-reference) ensure the [Streamlit Space](https://huggingface.co/docs/hub/spaces-sdks-streamlit) version (sdk_version) specified is supported by HF
