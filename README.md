@@ -4,7 +4,7 @@ emoji: 📈
 colorFrom: indigo
 colorTo: blue
 sdk: streamlit
-sdk_version: 1.17.0
+sdk_version: 1.21.0
 app_file: app.py
 pinned: false
 license: openrail
